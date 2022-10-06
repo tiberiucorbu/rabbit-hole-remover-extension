@@ -1,0 +1,32 @@
+{
+  "name": "Rabbit Hole Remover",
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Turns the page red when you click the icon",
+  "permissions": [
+    "webNavigation",
+    "scripting",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_icon": {
+      "128": "icons/g1231-128.png",
+      "64": "icons/g1231-64.png",
+      "32": "icons/g1231-32.png",
+      "16": "icons/g1231-16.png"
+    },
+    "default_title": "Rabbit Hole Remover",
+    "default_popup": "popout.html"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
